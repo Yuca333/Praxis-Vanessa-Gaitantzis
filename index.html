@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -80,7 +79,12 @@
       }
       /* Hide scrollbar */
       ::-webkit-scrollbar { display: none; }
-      html { -ms-overflow-style: none; scrollbar-width: none; }
+      html { 
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+        scroll-behavior: smooth;
+        scroll-padding-top: 5.5rem; /* Offset for sticky header */
+      }
     </style>
      <script type="application/ld+json">
       {

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Page } from '../types';
 import {
@@ -58,6 +57,24 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           </div>
 
         </div>
+
+        <div className="mt-16 space-y-12 text-sm">
+          <div id="impressum" className="space-y-4 border-t border-[var(--border)] pt-8">
+              <h3 className="font-display text-xl font-semibold text-[var(--ink)]">Impressum</h3>
+              <p>Angaben gemäß § 5 TMG</p>
+              <p>Vanessa Gaitantzis<br/>{ADDRESS}</p>
+              <p><strong>Kontakt:</strong><br/>Telefon: {PHONE}<br/>E-Mail: {EMAIL}</p>
+              <p><strong>Gesetzliche Berufsbezeichnung:</strong><br/>Ärztin (verliehen in der Bundesrepublik Deutschland)</p>
+              <p><strong>Zuständige Kammer:</strong><br/>Bayerische Landesärztekammer, Mühlbaurstraße 16, 81677 München</p>
+          </div>
+          <div id="datenschutz" className="space-y-4 border-t border-[var(--border)] pt-8">
+              <h3 className="font-display text-xl font-semibold text-[var(--ink)]">Datenschutzerklärung</h3>
+              <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+              <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis.</p>
+              <p>Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+          </div>
+        </div>
+
         <div className="mt-12 pt-8 border-t border-[var(--border)] text-center text-xs">
           <p>&copy; {new Date().getFullYear()} {PRAXIS_NAME}. Alle Rechte vorbehalten.</p>
         </div>

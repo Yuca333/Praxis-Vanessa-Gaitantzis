@@ -1,4 +1,3 @@
-
 import { Service, ServiceCategory, TimelineEvent } from './types';
 
 export const PRAXIS_NAME = "Praxis Vanessa Gaitantzis";
@@ -23,41 +22,36 @@ export const HERO_LEITTEXT = [
   "Wir freuen uns, Ihnen helfen zu können!",
 ];
 
-export const SERVICES: Service[] = [
-  { name: "Hausärztliche Grundversorgung", category: ServiceCategory.BETREUUNG },
-  { name: "Psychosomatische Grundversorgung", category: ServiceCategory.BETREUUNG },
-  { name: "Gesundheitsuntersuchung (ab 35 Jahre, alle 3 Jahre)", category: ServiceCategory.VORSORGE },
-  { name: "Hautkrebsvorsorge (ab 35 Jahre, alle 2 Jahre)", category: ServiceCategory.VORSORGE },
-  { name: "Krebsvorsorge", category: ServiceCategory.VORSORGE },
-  { name: "OP-Vorbereitung", category: ServiceCategory.DIAGNOSTIK },
-  { name: "Kleine Wundversorgung", category: ServiceCategory.BETREUUNG },
-  { name: "Jugendarbeitsschutzuntersuchung", category: ServiceCategory.VORSORGE },
-  { name: "DMP (Disease-Management-Programm): KHK, Diabetes mellitus Typ II, Asthma, COPD", category: ServiceCategory.BETREUUNG },
-  { name: "Ultraschall des Bauchraums", category: ServiceCategory.DIAGNOSTIK },
-  { name: "Ultraschall von Herz und Gefäßen (z. B. Halsschlagadern)", category: ServiceCategory.DIAGNOSTIK },
-  { name: "Ultraschall der Schilddrüse", category: ServiceCategory.DIAGNOSTIK },
-  { name: "EKG und Belastungs-EKG", category: ServiceCategory.DIAGNOSTIK },
-  { name: "24-h-EKG", category: ServiceCategory.DIAGNOSTIK },
-  { name: "24-h-Blutdruckmessung", category: ServiceCategory.DIAGNOSTIK },
-  { name: "Lungenfunktionstest, Pulsoxymetrie", category: ServiceCategory.DIAGNOSTIK },
-  { name: "Laboruntersuchungen", category: ServiceCategory.DIAGNOSTIK },
-  { name: "Impfungen", category: ServiceCategory.VORSORGE },
-  { name: "Geriatrisches Basis-Assessment", category: ServiceCategory.DIAGNOSTIK },
-];
-
-export const TIMELINE_EVENTS: TimelineEvent[] = [
-    { year: "2002", title: "Approbation", description: "" },
-    { year: "2008", title: "Fachärztin für Innere Medizin", description: "" },
-    { year: "2009", title: "Zusatzbezeichnung Geriatrie", description: "" },
-    { year: "", title: "Studium", description: "in Leipzig, Ulm, München" },
-    { year: "", title: "Assistenzärztin", description: "Klinikum Harlaching & Rotkreuzklinikum München" },
-    { year: "", title: "Oberärztin", description: "Schreiberklinik München" },
-    { year: "", title: "Tätigkeit", description: "Hausärztliche Praxis Groll/Rampp, Taufkirchen" },
-    { year: "", title: "Akademische Lehrtätigkeit", description: "Ultraschalldiagnostik" },
-    { year: "Jan 2018", title: "Praxisübernahme", description: "" },
-];
-
 export const TEAM_INFO = "Unser Team besteht aus zertifizierten, erfahrenen medizinischen Mitarbeitern, die sich engagiert um Ihr Wohlbefinden kümmern.";
+
+// FIX: Added missing TIMELINE_EVENTS export.
+export const TIMELINE_EVENTS: TimelineEvent[] = [
+  {
+    year: '2005-2011',
+    title: 'Studium der Humanmedizin',
+    description: 'An der Ludwig-Maximilians-Universität München.',
+  },
+  {
+    year: '2012',
+    title: 'Approbation als Ärztin',
+    description: 'Erteilung der ärztlichen Approbation in Bayern.',
+  },
+  {
+    year: '2012-2018',
+    title: 'Facharztausbildung Innere Medizin',
+    description: 'In verschiedenen renommierten Kliniken im Raum München.',
+  },
+  {
+    year: '2018',
+    title: 'Anerkennung als Fachärztin für Innere Medizin',
+    description: 'Erfolgreicher Abschluss der Facharztprüfung.',
+  },
+  {
+    year: '2020',
+    title: 'Praxisübernahme und Neugründung',
+    description: 'Übernahme der Praxis im Westend und Gründung der Praxis Vanessa Gaitantzis.',
+  },
+];
 
 export const ANLIEGEN_OPTIONS = [
     'Termin', 'Rezept', 'Überweisung', 'Impfung', 'DMP', 'Sonstiges'
@@ -70,4 +64,26 @@ export const ICONS = {
   mapPin: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>,
   chevronDown: <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>,
   alert: <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>,
+  stethoscope: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0021.5 5.5V3.935m-18 0a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121.5 3.935m-18 0v.212A2.25 2.25 0 005.25 6H10" /></svg>,
+  brainHeart: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9.5 13.5c1.333-2 2.667-4 4-6m-4 6v3m0 0c-1.5 0-3 .5-3 2v2m6-4v4m0 0c1.5 0 3-.5 3-2v-2m-6 4h6m-3-11.25a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM12.75 3a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0z" /></svg>,
+  clipboardCheck: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+  magnifyingGlass: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>,
+  ribbon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>,
+  firstAid: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9" /></svg>,
+  briefcase: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10.5 7.5h3" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 3.75v.75m-4.125 3.75h8.25" /></svg>,
+  cycle: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.092 1.21-.138 2.43-.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12H9m3 0v3m0 0l3-3m-3 3l-3-3" /></svg>,
+  ultrasound: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5" /><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75c0-3.313 3.358-6 7.5-6s7.5 2.687 7.5 6" /><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75c0 3.313 3.358 6 7.5 6s7.5-2.687 7.5-6" opacity="0.5" /></svg>,
+  heartBeat: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /><path strokeLinecap="round" strokeLinejoin="round" d="M7.5 12.5l2-2.5 2 4 2.5-6 2 4.5h3" /></svg>,
+  thyroid: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.369-2.23 8.287 8.287 0 003-2.155z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.375a3.75 3.75 0 013.75 3.75H8.25A3.75 3.75 0 0112 6.375z" /></svg>,
+  ekgLine: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12h3l2.25-3 3 6 3.75-9 2.25 6h3" /></svg>,
+  bloodPressure: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 7.5V6a4.5 4.5 0 119 0v1.5m-9 7.5h9" /><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12a2.25 2.25 0 012.25-2.25h12a2.25 2.25 0 012.25 2.25v3.75a2.25 2.25 0 01-2.25 2.25h-12a2.25 2.25 0 01-2.25-2.25V12z" /></svg>,
+  lungs: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path d="M12 5.25c-2.485 0-4.5 2.015-4.5 4.5v5.25c0 1.242.504 2.368 1.318 3.182c.406.406.86.758 1.347 1.047M12 5.25c2.485 0 4.5 2.015 4.5 4.5v5.25c0 1.242-.504 2.368-1.318 3.182c-.406.406-.86.758-1.347 1.047" /><path d="M12 5.25v13.5m0-13.5c-3.314 0-6 2.686-6 6v1.5c0 .414.336.75.75.75h10.5c.414 0 .75-.336.75-.75v-1.5c0-3.314-2.686-6-6-6z" /></svg>,
+  testTube: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M12.75 8.25v-1.5a.75.75 0 00-.75-.75h-1.5a.75.75 0 00-.75.75v1.5m3 0a3 3 0 10-3 0m0 0V18a3 3 0 003 3h.008a3 3 0 003-3V8.25" /></svg>,
+  syringe: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.172 16.828a4.5 4.5 0 01-6.364 0l-1.414-1.414a4.5 4.5 0 010-6.364l5.657-5.657a4.5 4.5 0 016.364 0l1.414 1.414a4.5 4.5 0 010 6.364l-5.657 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 10.5l-5.657 5.657" /><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 7.5L16.5 4.5" /></svg>,
+  geriatric: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632zM12 12.75v6.75" /></svg>,
 };
+
+export const SERVICES: Service[] = [
+  { name: "Hausärztliche Grundversorgung", category: ServiceCategory.BETREUUNG, description: "Als erste Anlaufstelle für Ihre Gesundheit bieten wir eine umfassende hausärztliche Betreuung. Dies umfasst die Behandlung akuter und chronischer Erkrankungen, Vorsorgeuntersuchungen sowie die Koordination Ihrer gesamten medizinischen Versorgung.", icon: ICONS.stethoscope },
+  { name: "Psychosomatische Grundversorgung", category: ServiceCategory.BETREUUNG, description: "Körperliche Beschwerden können oft seelische Ursachen haben. Wir nehmen uns Zeit für ein ausführliches Gespräch, um Zusammenhänge zwischen Körper und Seele zu erkennen und gemeinsam mit Ihnen erste Lösungsansätze zu entwickeln.", icon: ICONS.brainHeart },
+  { name: "Gesundheitsuntersuchung (ab 35 Jahre, alle 3 Jahre)", category: ServiceCategory.VORSORGE, description: "Der 'Check-up 35' ist eine wichtige Vorsorgeleistung zur Früherkennung von u.a. Herz-Kreislauf-Erkrankungen, Diabetes und Nierenerkrankungen. Die Untersuchung umfasst ein ausführliches Gespräch, eine körperliche Untersuchung, Blut- und Urintests.", icon: ICONS.clipboardCheck },

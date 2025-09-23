@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 
 export type Page = 'home' | 'about' | 'services' | 'contact';
 
@@ -10,6 +11,9 @@ export enum ServiceCategory {
 export interface Service {
   name: string;
   category: ServiceCategory;
+  description: string;
+  // FIX: Changed React.ReactNode to ReactNode after importing it.
+  icon?: ReactNode;
 }
 
 export interface TimelineEvent {

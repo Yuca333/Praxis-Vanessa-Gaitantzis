@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Page } from '../types';
 import { PRAXIS_NAME, PRAXIS_SUBTITLE, PHONE, ICONS } from '../constants';
 
@@ -31,18 +31,8 @@ const NavLink: React.FC<{
 };
 
 const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ease-out-quint ${isScrolled ? 'bg-[var(--card-bg)] shadow-[var(--card-shadow)] backdrop-blur-lg' : 'bg-transparent'}`}>
+    <header className="sticky top-0 z-50 transition-all duration-300 ease-out-quint bg-[var(--card-bg)] shadow-[var(--card-shadow)] backdrop-blur-lg">
       <div className="container mx-auto max-w-screen-xl px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 cursor-pointer" onClick={() => setCurrentPage('home')}>
