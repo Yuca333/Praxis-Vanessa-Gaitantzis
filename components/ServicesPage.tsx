@@ -30,10 +30,10 @@ const ServicesPage: React.FC = () => {
         <div className="flex justify-center flex-wrap gap-3 mb-12">
           <button
             onClick={() => setActiveCategory('all')}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 ${
+            className={`px-5 py-2 text-sm font-semibold rounded-full transition-colors duration-200 border ${
               activeCategory === 'all'
-                ? 'bg-[var(--accent)] text-white'
-                : 'bg-slate-100 dark:bg-gray-800 text-[var(--muted)] hover:bg-slate-200 dark:hover:bg-gray-700'
+                ? 'bg-[var(--accent)] text-white border-transparent'
+                : 'bg-transparent text-[var(--muted)] border-[var(--border)] hover:bg-[var(--accent-quiet)] hover:text-white hover:border-[var(--accent-quiet)]'
             }`}
           >
             Alle
@@ -42,10 +42,10 @@ const ServicesPage: React.FC = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 ${
+              className={`px-5 py-2 text-sm font-semibold rounded-full transition-colors duration-200 border ${
                 activeCategory === category
-                  ? 'bg-[var(--accent)] text-white'
-                  : 'bg-slate-100 dark:bg-gray-800 text-[var(--muted)] hover:bg-slate-200 dark:hover:bg-gray-700'
+                  ? 'bg-[var(--accent)] text-white border-transparent'
+                  : 'bg-transparent text-[var(--muted)] border-[var(--border)] hover:bg-[var(--accent-quiet)] hover:text-white hover:border-[var(--accent-quiet)]'
               }`}
             >
               {category}

@@ -15,8 +15,8 @@ const AboutPage: React.FC = () => {
             <div className="lg:col-span-5">
                 <div className="sticky top-28">
                     <img 
-                        src="https://picsum.photos/id/342/800/1000" 
-                        alt="Portrait von Vanessa Gaitantzis" 
+                        src="https://picsum.photos/seed/dr-portrait/800/1000" 
+                        alt="Portrait von Dr. Vanessa Gaitantzis" 
                         className="rounded-2xl w-full object-cover aspect-[4/5] shadow-xl"
                     />
                     <div className="mt-8">
