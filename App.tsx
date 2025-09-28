@@ -29,28 +29,8 @@ const App: React.FC = () => {
     
     matcher.addEventListener('change', onChange);
 
-    // Smooth scrolling for anchor links
-    const handleAnchorClick = (event: MouseEvent) => {
-      const link = (event.target as HTMLElement).closest('a');
-      // Check if it's an anchor link on the same page
-      if (link && link.hash && link.pathname === window.location.pathname) {
-        const targetId = link.hash.substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          event.preventDefault();
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-          });
-        }
-      }
-    };
-
-    document.addEventListener('click', handleAnchorClick);
-
     return () => {
       matcher.removeEventListener('change', onChange);
-      document.removeEventListener('click', handleAnchorClick);
     };
   }, []);
   

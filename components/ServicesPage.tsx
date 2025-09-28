@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
-import { ICONS, SERVICES } from '../constants';
+import React from 'react';
+import { SERVICES } from '../constants';
 import { ServiceCategory } from '../types';
 import GlassCard from './GlassCard';
 
 const ServicesPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<ServiceCategory | 'all'>('all');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-
-  const categories = [ServiceCategory.VORSORGE, ServiceCategory.DIAGNOSTIK, ServiceCategory.BETREUUNG];
-  
-  const filteredServices = activeCategory === 'all' 
-    ? SERVICES 
-    : SERVICES.filter(service => service.category === activeCategory);
-
-  const handleToggle = (serviceName: string) => {
-    setExpandedService(expandedService === serviceName ? null : serviceName);
-  };
+  const categories = [
+    ServiceCategory.VORSORGE,
+    ServiceCategory.DIAGNOSTIK,
+    ServiceCategory.BETREUUNG
+  ];
 
   return (
     <section className="py-fib-lg">
@@ -23,68 +16,41 @@ const ServicesPage: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="font-display text-[clamp(2.4rem,5vw,3.1rem)] font-semibold text-[var(--ink)]">Leistungen</h1>
           <p className="text-lg text-[var(--muted)] mt-4 max-w-2xl mx-auto">
-            Ein Überblick über unser medizinisches Spektrum. Klicken Sie auf eine Leistung für mehr Details.
+            Ein umfassender Überblick über unser medizinisches Spektrum für Ihre Gesundheit.
           </p>
         </div>
 
-        <div className="flex justify-center flex-wrap gap-3 mb-12">
-          <button
-            onClick={() => setActiveCategory('all')}
-            className={`px-5 py-2 text-sm font-semibold rounded-full transition-colors duration-200 border ${
-              activeCategory === 'all'
-                ? 'bg-[var(--accent)] text-white border-transparent'
-                : 'bg-transparent text-[var(--muted)] border-[var(--border)] hover:bg-[var(--accent-quiet)] hover:text-white hover:border-[var(--accent-quiet)]'
-            }`}
-          >
-            Alle
-          </button>
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 text-sm font-semibold rounded-full transition-colors duration-200 border ${
-                activeCategory === category
-                  ? 'bg-[var(--accent)] text-white border-transparent'
-                  : 'bg-transparent text-[var(--muted)] border-[var(--border)] hover:bg-[var(--accent-quiet)] hover:text-white hover:border-[var(--accent-quiet)]'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <div className="space-y-16">
+          {categories.map(category => {
+            const categoryServices = SERVICES.filter(s => s.category === category);
+            if (categoryServices.length === 0) return null;
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredServices.map((service) => {
-            const isExpanded = expandedService === service.name;
-            const serviceId = `service-desc-${service.name.replace(/[^a-zA-Z0-9]/g, '-')}`;
             return (
-              <GlassCard key={service.name} className="p-0 overflow-hidden">
-                <button
-                  onClick={() => handleToggle(service.name)}
-                  className="w-full text-left p-6 flex justify-between items-center gap-4"
-                  aria-expanded={isExpanded}
-                  aria-controls={serviceId}
-                >
-                  <div className="flex items-center gap-4 flex-1 min-w-0">
-                    <div className="flex-shrink-0 text-[var(--accent)]">
-                      {service.icon}
-                    </div>
-                    <h3 className="font-semibold text-[var(--ink)]">{service.name}</h3>
-                  </div>
-                  <div className={`flex-shrink-0 transform transition-transform duration-300 ease-in-out ${isExpanded ? 'rotate-180' : ''}`}>
-                    {ICONS.chevronDown}
-                  </div>
-                </button>
-                <div
-                  id={serviceId}
-                  className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-96' : 'max-h-0'}`}
-                >
-                  <div className="px-6 pb-6 pt-2 text-[var(--muted)] text-sm leading-relaxed">
-                    {service.description}
-                  </div>
+              <div key={category}>
+                <div className="mb-8">
+                    <h2 className="font-display text-3xl font-semibold text-[var(--ink)]">{category}</h2>
+                    <div className="mt-2 h-1 w-20 bg-[var(--accent)] rounded-full"></div>
                 </div>
-              </GlassCard>
-            )
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {categoryServices.map(service => (
+                    <GlassCard 
+                        key={service.name} 
+                        className="p-0 overflow-hidden transform transition-all duration-300 ease-out-quint hover:-translate-y-1 hover:shadow-2xl hover:border-[var(--accent-quiet)]/50"
+                    >
+                      <div className="p-6 flex flex-col h-full">
+                        <div className="mb-4">
+                            <div className="w-12 h-12 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center text-[var(--accent)]">
+                                {service.icon && React.cloneElement(service.icon, { className: 'w-7 h-7' })}
+                            </div>
+                        </div>
+                        <h3 className="text-lg font-semibold text-[var(--ink)] mb-2">{service.name}</h3>
+                        <p className="text-sm text-[var(--muted)] leading-relaxed flex-grow">{service.description}</p>
+                      </div>
+                    </GlassCard>
+                  ))}
+                </div>
+              </div>
+            );
           })}
         </div>
       </div>

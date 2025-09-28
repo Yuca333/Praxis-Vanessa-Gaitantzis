@@ -67,7 +67,7 @@ const GoogleReviews: React.FC = () => {
 
     return (
         <div className="w-full max-w-2xl mx-auto">
-            <GlassCard contentClassName="p-8 overflow-hidden" hasGlowEffect>
+            <GlassCard contentClassName="p-8 overflow-hidden">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
                     <div className="flex items-center gap-4">
                         <GoogleLogo />
@@ -84,7 +84,7 @@ const GoogleReviews: React.FC = () => {
 
                 <div className="border-t border-[var(--border)] my-6"></div>
 
-                <div className="relative min-h-[140px] flex flex-col justify-center">
+                <div className="relative py-4 flex flex-col justify-center">
                     <QuoteIcon />
                     <div className="relative text-center px-4">
                         <div

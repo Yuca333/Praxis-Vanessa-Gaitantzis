@@ -24,35 +24,6 @@ export const HERO_LEITTEXT = [
 
 export const TEAM_INFO = "Unser Team besteht aus zertifizierten, erfahrenen medizinischen Mitarbeitern, die sich engagiert um Ihr Wohlbefinden kümmern.";
 
-// FIX: Added missing TIMELINE_EVENTS export.
-export const TIMELINE_EVENTS: TimelineEvent[] = [
-  {
-    year: '2005-2011',
-    title: 'Studium der Humanmedizin',
-    description: 'An der Ludwig-Maximilians-Universität München.',
-  },
-  {
-    year: '2012',
-    title: 'Approbation als Ärztin',
-    description: 'Erteilung der ärztlichen Approbation in Bayern.',
-  },
-  {
-    year: '2012-2018',
-    title: 'Facharztausbildung Innere Medizin',
-    description: 'In verschiedenen renommierten Kliniken im Raum München.',
-  },
-  {
-    year: '2018',
-    title: 'Anerkennung als Fachärztin für Innere Medizin',
-    description: 'Erfolgreicher Abschluss der Facharztprüfung.',
-  },
-  {
-    year: '2020',
-    title: 'Praxisübernahme und Neugründung',
-    description: 'Übernahme der Praxis im Westend und Gründung der Praxis Vanessa Gaitantzis.',
-  },
-];
-
 export const ANLIEGEN_OPTIONS = [
     'Termin', 'Rezept', 'Überweisung', 'Impfung', 'DMP', 'Sonstiges'
 ];
@@ -81,7 +52,72 @@ export const ICONS = {
   testTube: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M12.75 8.25v-1.5a.75.75 0 00-.75-.75h-1.5a.75.75 0 00-.75.75v1.5m3 0a3 3 0 10-3 0m0 0V18a3 3 0 003 3h.008a3 3 0 003-3V8.25" /></svg>,
   syringe: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.172 16.828a4.5 4.5 0 01-6.364 0l-1.414-1.414a4.5 4.5 0 010-6.364l5.657-5.657a4.5 4.5 0 016.364 0l1.414 1.414a4.5 4.5 0 010 6.364l-5.657 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 10.5l-5.657 5.657" /><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 7.5L16.5 4.5" /></svg>,
   geriatric: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632zM12 12.75v6.75" /></svg>,
+  userHeart: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M22 14.24a2.72 2.72 0 0 0-3.8-3.8l-.2.2-.2-.2a2.72 2.72 0 0 0-3.8 3.8l4 4z"/></svg>,
+  shieldCheck: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>,
+  brainCircuit: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5.5a2.5 2.5 0 0 1 5 0V7a2.5 2.5 0 0 1-5 0V5.5z"/><path d="M12 14.5a2.5 2.5 0 0 1 5 0V16a2.5 2.5 0 0 1-5 0v-1.5z"/><path d="M7 5.5a2.5 2.5 0 0 0-5 0V7a2.5 2.5 0 0 0 5 0V5.5z"/><path d="M7 14.5a2.5 2.5 0 0 0-5 0V16a2.5 2.5 0 0 0 5 0v-1.5z"/><path d="M17 7.5h.5a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H17"/><path d="M7 7.5H6.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2H7"/><path d="M14.5 16.5h-5"/><path d="M14.5 7.5h-5"/><path d="M12 14v-3"/></svg>,
+  academicCap: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.7.9 3.2 2.3 4.1.9.6 2.1.9 3.2.9s2.3-.3 3.2-.9c1.4-.9 2.3-2.4 2.3-4.1v-5"/></svg>,
+  award: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><polyline points="13 2 13 9 20 9"/><path d="m9 12 2 2 4-4"/></svg>,
+  presentation: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="M7 21h10"/><path d="M12 16v5"/></svg>,
+  keyIcon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 11.5 3 3"/></svg>,
 };
+
+export const TIMELINE_EVENTS: TimelineEvent[] = [
+  {
+    year: 'Hintergrund',
+    title: 'Geboren in Karlsruhe, aufgewachsen in München',
+    description: 'Vanessa Gaitantzis (geb. Dennig) absolvierte ihre Schulausbildung am Gymnasium in München, was den Grundstein für ihre medizinische Laufbahn legte.',
+    icon: ICONS.mapPin,
+  },
+  {
+    year: 'Studium',
+    title: 'Studium der Humanmedizin',
+    description: 'Studienorte in Leipzig, Ulm und München verliehen ihr eine breite akademische Perspektive auf die Medizin.',
+    icon: ICONS.academicCap,
+  },
+  {
+    year: '2002',
+    title: 'Approbation als Ärztin',
+    description: 'Offizieller Beginn ihrer ärztlichen Tätigkeit nach erfolgreichem Abschluss des Medizinstudiums.',
+    icon: ICONS.award,
+  },
+  {
+    year: 'Klinische Erfahrung',
+    title: 'Assistenz- und Oberärztin in München',
+    description: 'Wichtige Stationen als Assistenzärztin im Klinikum Harlaching und Rotkreuzklinikum sowie als Oberärztin in der Schreiberklinik prägten ihre Fachkompetenz.',
+    icon: ICONS.stethoscope,
+  },
+  {
+    year: 'Praxistätigkeit',
+    title: 'Erfahrung in der hausärztlichen Versorgung',
+    description: 'Vertiefung der Kenntnisse in der ambulanten Patientenversorgung durch ihre Tätigkeit in der Hausärztlichen Praxis Groll/Rampp in Taufkirchen.',
+    icon: ICONS.briefcase,
+  },
+  {
+    year: '2008',
+    title: 'Fachärztin für Innere Medizin',
+    description: 'Anerkennung ihrer Spezialisierung und Expertise im breiten Feld der Inneren Medizin.',
+    icon: ICONS.ribbon,
+  },
+  {
+    year: '2009',
+    title: 'Zusatzbezeichnung Geriatrie',
+    description: 'Erwerb der Zusatzqualifikation zur spezialisierten medizinischen Betreuung älterer Patienten.',
+    icon: ICONS.geriatric,
+  },
+  {
+    year: 'Lehrtätigkeit',
+    title: 'Akademische Lehre',
+    description: 'Weitergabe von Wissen und Erfahrung im Bereich der Ultraschalldiagnostik an nachfolgende Medizinergenerationen.',
+    icon: ICONS.presentation,
+  },
+  {
+    year: 'Januar 2018',
+    title: 'Übernahme der Praxis Dr. Bauer',
+    description: 'Gründung der eigenen Praxis im Münchner Westend und Fortführung der etablierten Patientenversorgung.',
+    icon: ICONS.keyIcon,
+  },
+];
+
 
 export const SERVICES: Service[] = [
   { name: "Hausärztliche Grundversorgung", category: ServiceCategory.BETREUUNG, description: "Als erste Anlaufstelle für Ihre Gesundheit bieten wir eine umfassende hausärztliche Betreuung. Dies umfasst die Behandlung akuter und chronischer Erkrankungen, Vorsorgeuntersuchungen sowie die Koordination Ihrer gesamten medizinischen Versorgung.", icon: ICONS.stethoscope },
