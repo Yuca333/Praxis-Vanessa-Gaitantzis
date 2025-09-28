@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Page } from '../types';
 import { AKTUELLES_TEXT, HERO_LEITTEXT, OPENING_HOURS, ADDRESS, ICONS } from '../constants';
@@ -8,8 +7,6 @@ import GoogleReviews from './GoogleReviews';
 interface HomePageProps {
   setCurrentPage: (page: Page) => void;
 }
-
-const logoBase64 = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAEgASADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAfEAEBAQEBAAEFAQAAAAAAAAABEQAhQVFxofCBsSD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A/SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxOJxO'//DLA-END-OF-CONTENT-PART-1-OF-2";
 
 const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
   return (
@@ -36,9 +33,9 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
           <div className="md:col-span-7 h-full flex items-center justify-center">
             <div className="relative w-full max-w-lg p-2 border border-[var(--border)] rounded-2xl">
               <img 
-                src={logoBase64} 
-                alt="Logo der Praxis Vanessa Gaitantzis" 
-                className="w-full h-auto object-contain rounded-xl"
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1480&auto=format&fit=crop"
+                alt="Freundliche Ärztin im Gespräch mit einem Patienten"
+                className="w-full h-auto object-cover rounded-xl aspect-[4/3]"
               />
             </div>
           </div>
@@ -48,7 +45,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
       {/* Info Cards & Aktuelles */}
       <section className="container mx-auto max-w-screen-xl px-4 pb-fib-md -mt-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-            <GlassCard className="lg:col-span-2 p-5">
+            <GlassCard className="lg:col-span-2" contentClassName="p-5" hasGlowEffect>
                  <div className="flex items-center space-x-3 text-sm font-semibold text-[var(--accent-quiet)] bg-teal-500/10 dark:bg-teal-500/20 rounded-full px-4 py-2 mb-4 w-fit">
                     {ICONS.alert}
                     <span>Aktuelles</span>
@@ -56,14 +53,14 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
                 <p className="text-[var(--muted)]">{AKTUELLES_TEXT}</p>
             </GlassCard>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5">
-                <GlassCard className="p-5 flex items-start space-x-4">
+                <GlassCard contentClassName="p-5 flex items-start space-x-4" hasGlowEffect>
                     <div className="flex-shrink-0 text-[var(--accent)] pt-1">{ICONS.clock}</div>
                     <div>
                         <h3 className="font-semibold text-[var(--ink)] mb-1">Öffnungszeiten</h3>
                         <p className="text-sm text-[var(--muted)]">{OPENING_HOURS}</p>
                     </div>
                 </GlassCard>
-                <GlassCard className="p-5 flex items-start space-x-4">
+                <GlassCard contentClassName="p-5 flex items-start space-x-4" hasGlowEffect>
                     <div className="flex-shrink-0 text-[var(--accent)] pt-1">{ICONS.mapPin}</div>
                     <div>
                         <h3 className="font-semibold text-[var(--ink)] mb-1">Adresse & Anfahrt</h3>

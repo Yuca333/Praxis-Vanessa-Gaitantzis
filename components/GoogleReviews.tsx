@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import GlassCard from './GlassCard';
 
@@ -9,7 +10,7 @@ const GOOGLE_MAPS_URL = 'https://www.google.de/maps/place/Praxis+Vanessa+Gaitant
 
 // Real reviews provided by the user
 const REVIEWS = [
-  { quote: "Heute früh angerufen. Durfte kurzfristig kommen und hatte Glück da keine Wartezeit. Sehr sympathische Ärztin.", author: "Tina M." },
+  { quote: "Heute früh angerufen. Durfte kurzfristig kommen und hatte Glück da keine Warzeteit. Sehr sympathische Ärztin.", author: "Tina M." },
   { quote: "Frau Gaitantzis ist schon seit einigen Jahren meine Hausärztin. Ich fühle mich bei ihr und dem Praxisteam sehr gut aufgehoben. Sowohl Frau Gaitantzis, als auch ihr Team, sind sehr kompetent und einfühlsam.", author: "Ghost GCR" },
   { quote: "Eine super nette Ärztin und das Team ist auch sehr nett! Immer freundlich und zuvorkommend. So muss es sein, wenn man zum Arzt geht und WIRKLICH mal BERATEN wird.", author: "Ferit Cevikoglu" },
   { quote: "Ich bin wirklich mehr als begeistert von ihrer positiven und freundlichen Ausstrahlung. Bei jedem Problem habe ich mich bei ihr immer sehr ernst genommen gefühlt und wurde jederzeit ausführlich informiert. Vielen Dank!", author: "J. E." },
@@ -66,7 +67,7 @@ const GoogleReviews: React.FC = () => {
 
     return (
         <div className="w-full max-w-2xl mx-auto">
-            <GlassCard className="p-8 overflow-hidden relative transition-all duration-300">
+            <GlassCard contentClassName="p-8 overflow-hidden" hasGlowEffect>
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
                     <div className="flex items-center gap-4">
                         <GoogleLogo />
